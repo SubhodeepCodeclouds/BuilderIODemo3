@@ -8,6 +8,10 @@ export default function BuilderPage({ urlPath }: { urlPath: string }) {
   const [page, setPage] = useState<any>(null);
 
   useEffect(() => {
+    // builder.get('products').promise().then(({ data }) => {
+    //   console.log(data);
+    // });
+    
     async function fetchPage() {
       const fetchedPage = await builder
         .get("page", {
